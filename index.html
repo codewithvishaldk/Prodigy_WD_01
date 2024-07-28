@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>HOME PAGE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ARADHYA ACADEMY" name="keywords">
+    <meta content="ARADHYA ACADEMY" name="description">
+
+    <!-- Favicon -->
+    <link href="https://iili.io/JHkin3b.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <style>
+   
+        .owl-carousel,
+        .owl-carousel .owl-item {
+            -webkit-tap-highlight-color: transparent;
+            position: relative
+        }
+
+        .owl-carousel {
+            display: none;
+            width: 100%;
+            z-index: 1
+        }
+
+        .owl-carousel .owl-stage {
+            position: relative;
+            -ms-touch-action: pan-Y;
+            -moz-backface-visibility: hidden
+        }
+
+        .owl-carousel .owl-stage:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0
+        }
+
+        .owl-carousel .owl-stage-outer {
+            position: relative;
+            overflow: hidden;
+            -webkit-transform: translate3d(0, 0, 0)
+        }
+
+        .owl-carousel .owl-item,
+        .owl-carousel .owl-wrapper {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0)
+        }
+
+        .owl-carousel .owl-item {
+            min-height: 1px;
+            float: left;
+            -webkit-backface-visibility: hidden;
+            -webkit-touch-callout: none
+        }
+
+        .owl-carousel .owl-item img {
+            display: block;
+            width: 100%
+        }
+
+        .owl-carousel .owl-dots.disabled,
+        .owl-carousel .owl-nav.disabled {
+            display: none
+        }
+
+        .no-js .owl-carousel,
+        .owl-carousel.owl-loaded {
+            display: block
+        }
+
+        .owl-carousel .owl-dot,
+        .owl-carousel .owl-nav .owl-next,
+        .owl-carousel .owl-nav .owl-prev {
+            cursor: pointer;
+            cursor: hand;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        .owl-carousel.owl-loading {
+            opacity: 0;
+            display: block
+        }
+
+        .owl-carousel.owl-hidden {
+            opacity: 0
+        }
+
+        .owl-carousel.owl-refresh .owl-item {
+            visibility: hidden
+        }
+
+        .owl-carousel.owl-drag .owl-item {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        .owl-carousel.owl-grab {
+            cursor: move;
+            cursor: grab
+        }
+
+        .owl-carousel.owl-rtl {
+            direction: rtl
+        }
+
+        .owl-carousel.owl-rtl .owl-item {
+            float: right
+        }
+
+        .owl-carousel .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both
+        }
+
+        .owl-carousel .owl-animated-in {
+            z-index: 0
+        }
+
+        .owl-carousel .owl-animated-out {
+            z-index: 1
+        }
+
+        .owl-carousel .fadeOut {
+            animation-name: fadeOut
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        .owl-height {
+            transition: height .5s ease-in-out
+        }
+
+        .owl-carousel .owl-item .owl-lazy {
+            opacity: 0;
+            transition: opacity .4s ease
+        }
+
+        .owl-carousel .owl-item img.owl-lazy {
+            transform-style: preserve-3d
+        }
+
+        .owl-carousel .owl-video-wrapper {
+            position: relative;
+            height: 100%;
+            background: #000
+        }
+
+        .owl-carousel .owl-video-play-icon {
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            left: 50%;
+            top: 50%;
+            margin-left: -40px;
+            margin-top: -40px;
+            background: url(owl.video.play.png) no-repeat;
+            cursor: pointer;
+            z-index: 1;
+            -webkit-backface-visibility: hidden;
+            transition: transform .1s ease
+        }
+
+        .owl-carousel .owl-video-play-icon:hover {
+            -ms-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3)
+        }
+
+        .owl-carousel .owl-video-playing .owl-video-play-icon,
+        .owl-carousel .owl-video-playing .owl-video-tn {
+            display: none
+        }
+
+        .owl-carousel .owl-video-tn {
+            opacity: 0;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: opacity .4s ease
+        }
+
+        .owl-carousel .owl-video-frame {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="home.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-none d-lg-block">
+        <div class="row align-items-center py-4 px-xl-5">
+            <div class="col-lg-3">
+                <a href="" class="text-decoration-none">
+                    <h1 class="m-0"><span class="text-primary">ARADHYA</span></h1>
+
+                    <h1 class="m-0"><span class="text-primary"></span>ACADEMY</h1>
+                </a>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Our Office</h6>
+                        <small>MALIK CHOWK, RAMNAGAR, ALIGARH</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-envelope text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Email Us</h6>
+                        <small>Aradhyaacademyaligarh@gmail.com</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <i class="fa fa-2x fa-phone text-primary mr-3"></i>
+                    <div class="text-left">
+                        <h6 class="font-weight-semi-bold mb-1">Call Us</h6>
+                        <small>+91 9555664309</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="d-flex align-items-center justify-content-between bg-secondary w-100 text-decoration-none"
+                    data-toggle="collapse" href="#navbar-vertical" style="height: 67px; padding: 0 30px;">
+                    <h5 class="text-primary m-0"><i class="fa fa-book-open mr-2"></i>Subjects</h5>
+                    <i class="fa fa-angle-down text-primary"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
+                    id="navbar-vertical" style="width: calc(100% - 30px); z-index: 9;">
+                    <div class="navbar-nav w-100">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">MATH <i
+                                    class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="" class="dropdown-item">SCIENCE</a>
+                                <a href="" class="dropdown-item">PHYSICS</a>
+                                <a href="" class="dropdown-item">CHEMISRY</a>
+                            </div>
+                        </div>
+                        <a href="" class="nav-item nav-link">BIOLOGY</a>
+
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0"><span class="text-primary">ARADHYA</span> ACADEMY</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav py-0">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="/login.html" class="nav-item nav-link">log-in</a>
+                            <a href="https://openinapp.co/sm2px" class="nav-item nav-link">RATE US</a>
+                            <a href="/result.html" class="nav-item nav-link">PHYSICS MERATHON</a>
+
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="/login.html">login</a>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
+    </div>
+    </nav>
+    </div>
+    </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 mb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#header-carousel" data-slide-to="1"></li>
+                <li data-target="#header-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="https://iili.io/JHOXJ6u.jpg"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3">BEST COACHING IN ALIGARH</h5>
+                            <h1 class="display-3 text-white mb-md-4">Best COACHING FOR Your ACADEMICS </h1>
+                            <a href="/login.html" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="https://iili.io/JHOX3aj.jpg"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3">BEST COACHING IN ALIGARH</h5>
+                            <h1 class="display-3 text-white mb-md-4">A APP FOR YOUR ACADEMICS</h1>
+                            <a href="/login.html" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="min-height: 300px;">
+                    <img class="position-relative w-100" src="https://iili.io/JHOXHGe.jpg"
+                        style="min-height: 300px; object-fit: cover;">
+                    <div class="carousel-caption d-flex align-items-center justify-content-center">
+                        <div class="p-5" style="width: 100%; max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-md-3">BEST COACHING IN ALIGARH</h5>
+                            <h1 class="display-3 text-white mb-md-4">WIDE RANGE TEST SERIES.</h1>
+                            <a href="/login.html" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded mb-4 mb-lg-0" src="https://iili.io/JHOXF8x.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <div class="text-left mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
+                        <h1>Innovative Way To Learn</h1>
+                    </div>
+                    <p>
+                        Aradhya Academy is your gateway to success in education. We are
+                        dedicated to providing top-quality education to students of all ages
+                        and backgrounds. Our commitment to excellence and innovation sets us
+                        apart from the rest. </p>
+                    <p>
+                        At Aradhya Academy, we offer a wide range of services to support your
+                        educational journey:
+                    </p>
+                    <ul>
+                        <li>
+                            Daily, weekly, and chapter-wise tests to assess and enhance your
+                            knowledge.
+                        </li>
+                        <li>
+                            Access to our AI-powered learning app for personalized learning
+                            experiences.
+                        </li>
+                        <li>
+                            Comprehensive and free study materials to help you excel in your
+                            studies.
+                        </li>
+                        <li>
+                            Recorded lectures for every class, so you can review and learn at
+                            your own pace.
+                        </li>
+                        <li>
+                            State-of-the-art air-conditioned classrooms for a comfortable
+                            learning environment.
+                        </li>
+                        <li>
+                            24/7 support to answer your questions and provide assistance
+                            whenever you need it.
+                        </li>
+                        <a href="/login.html" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn
+                            More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Category Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">START</h5>
+                <h1><span>Why</span>Choose Us . <span>?</span></h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOji6F.jpg" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="/login.html">
+                            <h4 class="text-white font-weight-medium">Recorded lectures</h4>
+                            <span>100+ video</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOjPG1.jpg" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="/login.html">
+                            <h4 class="text-white font-weight-medium">AI-powered APP</h4>
+                            <span>questions/answers</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOj6CP.jpg" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="/login.html">
+                            <h4 class="text-white font-weight-medium">Test SERIES</h4>
+                            <span>5+ Test</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOjrZB.jpg" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="/login.html">
+                            <h4 class="text-white font-weight-medium">A.C* classes</h4>
+                            <span>comfortable</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOjgjV.jpg" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="/login.html">
+                            <h4 class="text-white font-weight-medium">24x7 support</h4>
+                            <span>1+ team</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOj8yx.jpg" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="/login.html">
+                            <h4 class="text-white font-weight-medium">NIGHT classes </h4>
+                            <span>100% success</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOjvvj.jpg" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="/login.html">
+                            <h4 class="text-white font-weight-medium">NOTES</h4>
+                            <span>100+</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOjUTQ.jpg" alt="">
+                        <a class="cat-overlay text-white text-decoration-none" href="/login.html">
+                            <h4 class="text-white font-weight-medium">LEARN ANYTHING LIKE A GAME</h4>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Category Start -->
+
+
+    <!-- Courses Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Courses</h5>
+                <h1>Our Popular Courses</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHON3iP.jpg" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="/files.html">Recorded lectures </a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5.0<small>(20)</small>
+                                    </h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHON2WB.jpg" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="/login.html">AI-powered APPLICATION</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5.0 <small>(20)</small>
+                                    </h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHON9Ox.jpg" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="/login.html">WIDE RANGE TEST SERIES</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5.0 <small>(20)</small>
+                                    </h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHOwyRj.jpg" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="/login.html">24 X 7 support </a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5.0 <small>(20)</small>
+                                    </h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHONdxV.jpg" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="/login.html">FREE STUDY materials</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5.0 <small>(20)</small>
+                                    </h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded overflow-hidden mb-2">
+                        <img class="img-fluid" src="https://iili.io/JHONHDQ.jpg" alt="">
+                        <div class="bg-secondary p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
+                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
+                            </div>
+                            <a class="h5" href="/login.html">NIGHT classes</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>5.0 <small>(20)</small>
+                                    </h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+
+
+    <!-- Registration Start -->
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">WANT TO JOIN US</h5>
+                        <h1 class="text-white">30% Off* For New Students</h1>
+                    </div>
+                    <p class="text-white">JOIN US AND USE OUR APP AND Access OUR VIDEO Libraries AND ALSO DOWNLOAD NOTES
+                        &BOOKS</p>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>FULL Access OF Recorded lectures
+                        </li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>FREE TO USE OUR A.I</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>DOWNLOAD NOTES</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card border-0">
+                        <div class="card-header bg-light text-center p-4">
+                            <h1 class="m-0">Sign Up Now</h1>
+                        </div>
+                        <div class="card-body rounded-bottom bg-primary p-5">
+                            <form action="https://getform.io/f/c9249bd2-4afa-4356-930a-ae0589149831" method="POST">
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" name="name"
+                                        placeholder="Your name" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control border-0 p-4" name="email"
+                                        placeholder="Your email" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control border-0 p-4" name="number"
+                                        placeholder="YOUR number" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select border-0 px-4" style="height: 47px;" name="CLASS">
+                                        <option selected>Select a course</option>
+                                        <option value="Course 1">CLASS 09</option>
+                                        <option value="Course 2">CLASS 10</option>
+                                        <option value="Course 3">CLASS 11</option>
+                                        <option value="Course 4">CLASS 11</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button class="btn btn-dark btn-block border-0 py-3" type="submit">SUBMIT</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">TEAM</h5>
+                <h1>OUR TEAM</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 text-center team mb-4">
+                    <div class="team-item rounded overflow-hidden mb-2">
+                        <div class="team-img position-relative">
+                            <img class="img-fluid" src="https://iili.io/JHjm8RR.md.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1"
+                                    href="https://insta.openinapp.co/1ksqx"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                        <div class="bg-secondary p-4">
+                            <h5>ADARSH SIR</h5>
+                            <p class="m-0">DIRECTOR</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-3 text-center team mb-4">
+                        <div class="team-item rounded overflow-hidden mb-2">
+                            <div class="team-img position-relative">
+                                <img class="img-fluid" src="https://iili.io/JHjmH8v.md.png" alt="">
+                                <div class="team-social">
+                                    <a class="btn btn-outline-light btn-square mx-1"
+                                        href="https://twtr.openinapp.co/dv09v"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-light btn-square mx-1"
+                                        href="https://insta.openinapp.co/vzmel"><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-outline-light btn-square mx-1" href="#"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-secondary p-4">
+                                <h5>VISHAL</h5>
+                                <p class="m-0">DEVELOPER</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-5">
+                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Our Blog</h5>
+                <h1>Latest From Our Blog</h1>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                        <video width="100%" height="auto" autoplay muted loop>
+                            <source
+                                src="https://cdn.glitch.global/19400d4c-caed-4396-8423-2a38d4cde1da/20230412_2131111.mp4?v=1681315514979"
+                                type="video/mp4" />
+                        </video>
+                        <a class="blog-overlay text-decoration-none" href="">
+                            <h5 class="text-white mb-3">..</h5>
+                            <p class="text-primary m-0">Jan 01, 2050</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                        <video width="100%" height="auto" autoplay muted loop>
+                            <source
+                                src="https://cdn.glitch.global/19400d4c-caed-4396-8423-2a38d4cde1da/20230412_2131111.mp4?v=1681315514979"
+                                type="video/mp4" />
+                        </video>
+                        <a class="blog-overlay text-decoration-none" href="">
+                            <h5 class="text-white mb-3">..</h5>
+                            <p class="text-primary m-0">Jan 01, 2050</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/blog-3.jpg" alt="">
+                        <a class="blog-overlay text-decoration-none" href="">
+                            <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut
+                                clita</h5>
+                            <p class="text-primary m-0">Jan 01, 2050</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>MALIK CHOWK RAMNAGAR, ALIGARH</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+91 9555664309 </p>
+                        <p><i class="fa fa-envelope mr-2"></i>Aradhyaacademyaligarh@gmail.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light btn-square" href="https://insta.openinapp.co/qbsyi"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-5">
+                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">WE TEACH</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>CLASS IX</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>CLASS X</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>CLASS XI</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>CLASS XII
+                                (P.C.M)</a>
+                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>CLASS XII (P.C.B)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
+        style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a href="#">ARADHYA ACADEMY</a>. All Rights Reserved. Designed by <a
+                        href="https://openinapp.co/hbdoi">vishal TECH SOLUTIONS </a><a>(VISHAL)</a>
+                </p>
+            </div>
+            <div class="col-lg-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        !function (n) { "function" == typeof define && define.amd ? define(["jquery"], function (e) { return n(e) }) : "object" == typeof module && "object" == typeof module.exports ? exports = n(require("jquery")) : n(jQuery) }(function (n) { function e(n) { var e = 7.5625, t = 2.75; return n < 1 / t ? e * n * n : n < 2 / t ? e * (n -= 1.5 / t) * n + .75 : n < 2.5 / t ? e * (n -= 2.25 / t) * n + .9375 : e * (n -= 2.625 / t) * n + .984375 } void 0 !== n.easing && (n.easing.jswing = n.easing.swing); var t = Math.pow, u = Math.sqrt, r = Math.sin, i = Math.cos, a = Math.PI, c = 1.70158, o = 1.525 * c, s = 2 * a / 3, f = 2 * a / 4.5; n.extend(n.easing, { def: "easeOutQuad", swing: function (e) { return n.easing[n.easing.def](e) }, easeInQuad: function (n) { return n * n }, easeOutQuad: function (n) { return 1 - (1 - n) * (1 - n) }, easeInOutQuad: function (n) { return n < .5 ? 2 * n * n : 1 - t(-2 * n + 2, 2) / 2 }, easeInCubic: function (n) { return n * n * n }, easeOutCubic: function (n) { return 1 - t(1 - n, 3) }, easeInOutCubic: function (n) { return n < .5 ? 4 * n * n * n : 1 - t(-2 * n + 2, 3) / 2 }, easeInQuart: function (n) { return n * n * n * n }, easeOutQuart: function (n) { return 1 - t(1 - n, 4) }, easeInOutQuart: function (n) { return n < .5 ? 8 * n * n * n * n : 1 - t(-2 * n + 2, 4) / 2 }, easeInQuint: function (n) { return n * n * n * n * n }, easeOutQuint: function (n) { return 1 - t(1 - n, 5) }, easeInOutQuint: function (n) { return n < .5 ? 16 * n * n * n * n * n : 1 - t(-2 * n + 2, 5) / 2 }, easeInSine: function (n) { return 1 - i(n * a / 2) }, easeOutSine: function (n) { return r(n * a / 2) }, easeInOutSine: function (n) { return -(i(a * n) - 1) / 2 }, easeInExpo: function (n) { return 0 === n ? 0 : t(2, 10 * n - 10) }, easeOutExpo: function (n) { return 1 === n ? 1 : 1 - t(2, -10 * n) }, easeInOutExpo: function (n) { return 0 === n ? 0 : 1 === n ? 1 : n < .5 ? t(2, 20 * n - 10) / 2 : (2 - t(2, -20 * n + 10)) / 2 }, easeInCirc: function (n) { return 1 - u(1 - t(n, 2)) }, easeOutCirc: function (n) { return u(1 - t(n - 1, 2)) }, easeInOutCirc: function (n) { return n < .5 ? (1 - u(1 - t(2 * n, 2))) / 2 : (u(1 - t(-2 * n + 2, 2)) + 1) / 2 }, easeInElastic: function (n) { return 0 === n ? 0 : 1 === n ? 1 : -t(2, 10 * n - 10) * r((10 * n - 10.75) * s) }, easeOutElastic: function (n) { return 0 === n ? 0 : 1 === n ? 1 : t(2, -10 * n) * r((10 * n - .75) * s) + 1 }, easeInOutElastic: function (n) { return 0 === n ? 0 : 1 === n ? 1 : n < .5 ? -(t(2, 20 * n - 10) * r((20 * n - 11.125) * f)) / 2 : t(2, -20 * n + 10) * r((20 * n - 11.125) * f) / 2 + 1 }, easeInBack: function (n) { return (c + 1) * n * n * n - c * n * n }, easeOutBack: function (n) { return 1 + (c + 1) * t(n - 1, 3) + c * t(n - 1, 2) }, easeInOutBack: function (n) { return n < .5 ? t(2 * n, 2) * (7.189819 * n - o) / 2 : (t(2 * n - 2, 2) * ((o + 1) * (2 * n - 2) + o) + 2) / 2 }, easeInBounce: function (n) { return 1 - e(1 - n) }, easeOutBounce: e, easeInOutBounce: function (n) { return n < .5 ? (1 - e(1 - 2 * n)) / 2 : (1 + e(2 * n - 1)) / 2 } }) });
+
+    </script>
+
+    <script src="HOME.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="main.js"></script>
+</body>
+
+</html>
